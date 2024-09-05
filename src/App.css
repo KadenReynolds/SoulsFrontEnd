@@ -1,0 +1,257 @@
+@font-face {
+  font-family: myFont;
+  src: url(./assets/OptimusPrinceps.ttf);
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Catalog Games */
+
+.gameMasterDiv{
+  /* display: absolute; */
+  left: 0;
+  right: 150%;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-template-rows: 31% 31% 31%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 70svw;
+  aspect-ratio: 1;
+}
+
+.gameDiv{
+  position: relative;
+  width: auto;
+  height: auto;
+  border-radius: 15px;
+  margin: 3%;
+  z-index: 0;
+}
+
+.gameDiv > img{
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.gameDiv > div{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: black;
+  opacity: 0%;
+  transition: .5s;
+}
+
+.gameName{
+  margin-top: 30%;
+  margin-bottom: 10%;
+  color: white;
+  font-size: 25pt;
+  font-family: myFont;
+  font-weight: lighter;
+}
+
+.gameDiv:hover > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: black;
+  opacity: 95%;
+  transition: .5s;
+}
+
+.gameEditButton{
+  color: green;
+  background-color: rgb(24, 24, 24);
+  opacity: 100%;
+  margin-right: 5px;
+  z-index: 1;
+}
+
+.gameDeleteButton{
+  color: red;
+  background-color: rgb(24, 24, 24);
+  opacity: 100%;
+  z-index: 1;
+}
+
+/* ---------------------------- */
+
+
+/* Login */
+
+.formDiv{
+  position: absolute;
+  top: 10svh;
+  left: 25%;
+  width: 50svw;
+  aspect-ratio: 1.6;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.form{
+  position: relative;
+  width: 50svw;
+  aspect-ratio: 1.6;
+}
+
+.form > h2{
+  font-size: 35pt;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form > p{
+  font-size: 10pt;
+  margin-top: 5px;
+  margin-bottom: 8svh;
+}
+
+.formInputs{
+  width: 10svw;
+  aspect-ratio: 6;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  border-color: grey;
+}
+
+#formError{
+  color: red;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ---------------------------- */
+
+/* GameBosses */
+
+/* .gameRelativeDiv{
+  position: relative;
+  width: 80svw;
+  height: 240svw;
+} */
+
+.bossGameMasterDiv{
+  position: relative;
+  left: 0;
+  margin-left: -15svw;
+  width: 80svw;
+  height: 240svw;
+  /* background-color: black; */
+  overflow-x: hidden;
+}
+
+.bossDiv{
+  overflow-x: hidden;
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+.bossDiv > h3{
+  position: absolute;
+  top: 3svh;
+  left: 1svw;
+  color: white;
+  font-size: 25pt;
+}
+
+.bossDiv > img{
+  margin-right: 100%;
+  margin-top: 12svh;
+  width: 60svw;
+  aspect-ratio: 1.7;
+}
+
+.bossDiv > h5{
+  width: 12svw;
+  font-size: 15pt;
+  margin-right: 100%;
+  color: white;
+}
+
+.bossDiv > h4{
+  width: 12svw;
+  font-size: 20pt;
+  font-weight: lighter;
+  margin-right: 100%;
+  color: white;
+}
+
+.bossDiv > p{
+  color: white;
+  position: absolute;
+  right: 20svw;
+  bottom: 25svw;
+  left: 15svw;
+  top: 43svw;
+}
+
+/* ---------------------------- */
+
+/* Boss Form */
+
+.bossFormDiv{
+  position: relative;
+  width: 50svw;
+  aspect-ratio: .75;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.bossFormDiv{
+  margin-bottom: 5svh;
+}

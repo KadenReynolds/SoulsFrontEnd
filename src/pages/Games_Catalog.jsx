@@ -17,7 +17,7 @@ export default function Games_Catalog({token}) {
     let API = '/api'
 
     try {
-      const response = await fetch(`http://soulsserver-production.up.railway.app/api/games`)
+      const response = await fetch(`https://soulsserver-production.up.railway.app/api/games`)
       const result = await response.json()
 
       console.log(result.games)

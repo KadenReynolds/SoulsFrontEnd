@@ -4,28 +4,29 @@ import { useParams, useNavigate } from "react-router-dom"
 export default function GameBosses({token}) {
   const [bosses, setBosses] = useState([])
   const [game, setGame] = useState({})
+  let bossRank = 1
 
   const navigate = useNavigate();
   const { gameID } = useParams();
   
   useEffect (() => {
     getGameByGameID();
-    getBossesByGameID();
+    getBossesByGameIDInOrderOfLadela();
   }, [])
 
-  async function getBossesByGameID() {
-    try {
-      const response = await fetch(`https://soulsserver-production.up.railway.app/api/bosses/${gameID}`)
-      const result = await response.json()
+  // async function getBossesByGameID() {
+  //   try {
+  //     const response = await fetch(`https://soulsserver-production.up.railway.app/api/bosses/${gameID}`)
+  //     const result = await response.json()
 
-      console.log(result.bosses)
+  //     console.log(result.bosses)
 
-      setBosses(result.bosses)
-    }
-    catch(err){
-      console.error(err.message)
-    }
-  }
+  //     setBosses(result.bosses)
+  //   }
+  //   catch(err){
+  //     console.error(err.message)
+  //   }
+  // }
 
   async function getGameByGameID() {
     try {
@@ -35,6 +36,20 @@ export default function GameBosses({token}) {
       console.log(result.game[0])
 
       setGame(result.game[0])
+    }
+    catch(err){
+      console.error(err.message)
+    }
+  }
+
+  async function getBossesByGameIDInOrderOfLadela(){
+    try {
+      const response = await fetch(`https://soulsserver-production.up.railway.app/api/bosses/${gameID}/ladela`)
+      const result = await response.json()
+
+      console.log(result.bosses)
+
+      setBosses(result.bosses)
     }
     catch(err){
       console.error(err.message)
@@ -51,6 +66,22 @@ export default function GameBosses({token}) {
         }
       })
       navigate('/catalog_games')
+    }
+    catch(err){
+      console.error(err.message)
+    }
+  }
+
+  async function deleteBoss(boss_id){
+    try {
+      await fetch(`https://soulsserver-production.up.railway.app/api/bosses/${boss_id}`, {
+        method: 'DELETE',
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`,
+        }
+      })
+      window.location.reload()
     }
     catch(err){
       console.error(err.message)
@@ -75,7 +106,15 @@ export default function GameBosses({token}) {
           {bosses.map((boss) => {
             return(
                 <div key={boss.boss_id} className="bossDiv">
-                  <h3>{boss.name}</h3>
+                  <h3>#{bossRank++} {boss.name}</h3>
+                  {!token
+                    ?
+                    <></>
+                    :
+                    <>
+                      <button className="deleteBoss" onClick={() => {deleteBoss(boss.boss_id)}}>X</button>
+                    </>
+                  }
                   <img src={boss.boss_image} alt="Photo Not Available" />
                   <br />
                   <h5>Lore: <i>{boss.lore}</i></h5>

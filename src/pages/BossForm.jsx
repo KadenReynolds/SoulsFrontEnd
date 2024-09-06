@@ -129,70 +129,70 @@ export default function BossForm({token}) {
               Image:
             </label>
             <br />
-            <input type="text" placeholder="Enter Image URL" className="formInputs" onChange={handleImage}/>
+            <input type="text" placeholder="Enter Image URL" className="formInputs" onChange={handleImage} required/>
             <br />
             <br />
             <label htmlFor="game_id">
               Game_ID:
             </label>
             <br />
-            <input type="number" placeholder="Enter Game_ID" className="formInputs" onChange={handleID}/>
+            <input type="number" placeholder="Enter Game_ID" className="formInputs" onChange={handleID} required/>
             <br />
             <br />
             <label htmlFor="game_rank">
               Game_Rank:
             </label>
             <br />
-            <input type="number" placeholder="Enter Game Rank" className="formInputs" onChange={handleGameRank}/>
+            <input type="number" placeholder="Enter Game Rank" className="formInputs" onChange={handleGameRank} defaultValue={0}/>
             <br />
             <br />
             <label htmlFor="overall_rank">
               Overall_Rank:
             </label>
             <br />
-            <input type="number" placeholder="Enter Overall Rank" className="formInputs" onChange={handleOverallRank}/>
+            <input type="number" placeholder="Enter Overall Rank" className="formInputs" onChange={handleOverallRank} defaultValue={0}/>
             <br />
             <br />
             <label htmlFor="lore">
               Lore:
             </label>
             <br />
-            <input type="number" placeholder="Enter Lore" className="formInputs" onChange={handleLore}/>
+            <input type="number" placeholder="Enter Lore" className="formInputs" onChange={handleLore} required/>
             <br />
             <br />
             <label htmlFor="appearence">
               Appearence:
             </label>
             <br />
-            <input type="number" placeholder="Enter Appearance" className="formInputs" onChange={handleAppearance}/>
+            <input type="number" placeholder="Enter Appearance" className="formInputs" onChange={handleAppearance} required/>
             <br />
             <br />
             <label htmlFor="difficulty">
               Difficulty:
             </label>
             <br />
-            <input type="number" placeholder="Enter Difficulty" className="formInputs" onChange={handleDifficulty}/>
+            <input type="number" placeholder="Enter Difficulty" className="formInputs" onChange={handleDifficulty} required/>
             <br />
             <br />
             <label htmlFor="entertainment">
               Entertainment:
             </label>
             <br />
-            <input type="number" placeholder="Enter Entertainment" className="formInputs" onChange={handleEntertainment}/>
+            <input type="number" placeholder="Enter Entertainment" className="formInputs" onChange={handleEntertainment} required/>
             <br />
             <br />
             <label htmlFor="level">
               Level:
             </label>
             <br />
-            <input type="number" placeholder="Enter Level Score" className="formInputs" onChange={handleLevel}/>
+            <input type="number" placeholder="Enter Level Score" className="formInputs" onChange={handleLevel} required/>
             <br />
             <br />
             <label htmlFor="annoyance">
               Annoyance:
             </label>
             <br />
-            <input type="number" placeholder="Enter Annoyance" className="formInputs" onChange={handleAnnoyance}/>
+            <input type="number" placeholder="Enter Annoyance" className="formInputs" onChange={handleAnnoyance} required/>
             <br />
             <br />
             <button type="submit">Save</button>

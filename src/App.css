@@ -189,7 +189,7 @@
   left: 0;
   margin-left: -15svw;
   width: 80svw;
-  height: 240svw;
+  height: auto;
   /* background-color: black; */
   overflow-x: hidden;
 }
@@ -207,6 +207,15 @@
   left: 1svw;
   color: white;
   font-size: 25pt;
+}
+
+.deleteBoss{
+  position: absolute;
+  color: red;
+  top: 7svh;
+  right: 20svw;
+  font-size: 10pt;
+  font-weight: bolder;
 }
 
 .bossDiv > img{

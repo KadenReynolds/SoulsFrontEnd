@@ -113,13 +113,14 @@ export default function GameBosses({token}) {
                     <></>
                     :
                     <>
+                      <button className="editBoss" onClick={() => {navigate(`/bosses/editboss/${boss.boss_id}`)}}>i</button>
                       <button className="deleteBoss" onClick={() => {deleteBoss(boss.boss_id)}}>X</button>
                     </>
                   }
                   <img src={boss.boss_image} alt="Photo Not Available" />
                   <br />
                   <h5>Lore: <i>{boss.lore}</i></h5>
-                  <h5>Appearence: <i>{boss.appearence}</i></h5>
+                  <h5>Appearance: <i>{boss.appearence}</i></h5>
                   <h5>Difficulty: <i>{boss.difficulty}</i></h5>
                   <h5>Entertainment: <i>{boss.entertainment}</i></h5>
                   <h5>Level: <i>{boss.level}</i></h5>

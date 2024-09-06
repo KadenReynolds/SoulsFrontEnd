@@ -218,6 +218,15 @@
   font-weight: bolder;
 }
 
+.editBoss{
+  position: absolute;
+  color: green;
+  top: 7svh;
+  right: 23svw;
+  font-size: 10pt;
+  font-weight: bolder;
+}
+
 .bossDiv > img{
   margin-right: 100%;
   margin-top: 12svh;

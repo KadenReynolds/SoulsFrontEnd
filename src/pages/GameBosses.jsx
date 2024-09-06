@@ -82,7 +82,7 @@ export default function GameBosses({token}) {
         }
       })
       // window.location.reload()
-      navigate(`/bosses/${game.game_id}`)
+      navigate(`/catalog_games`)
     }
     catch(err){
       console.error(err.message)

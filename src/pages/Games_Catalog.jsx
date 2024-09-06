@@ -10,6 +10,7 @@ export default function Games_Catalog({token}) {
 
   useEffect(() => {
     fetchGames()
+    window.scrollTo(0,0)
   },[])
 
   async function fetchGames(){

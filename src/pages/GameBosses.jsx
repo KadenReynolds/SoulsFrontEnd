@@ -81,7 +81,8 @@ export default function GameBosses({token}) {
             "Authorization": `Bearer ${token}`,
         }
       })
-      window.location.reload()
+      // window.location.reload()
+      navigate(`/bosses/${game.game_id}`)
     }
     catch(err){
       console.error(err.message)

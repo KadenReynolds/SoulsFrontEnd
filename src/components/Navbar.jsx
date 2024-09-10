@@ -1,29 +1,45 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import menu from '../assets/menu.svg'
+import menuflipped from '../assets/menuflipped.svg'
+import { useLocation } from "react-router-dom"
 
 export default function Navbar({token}){
-  const [buttonClass, setButtonClass] = useState('dropdownPre')
-  const [clickNum, setClickNum] = useState(0)
+  const [classHome, setClassHome] = useState("navLinks")
+  const [classGames, setClassGames] = useState("navLinks")
+  const [classLogin, setClassLogin] = useState("navLinks")
+  const [classBossForm, setClassBossForm] = useState("navLinks")
+  const location = useLocation().pathname
+
+  useEffect(() => {
+    getPath()
+  },[])
+  
+  function getPath() {
+    console.log(location)
+    if(location === "/"){
+      setClassHome("active")
+      console.log(classHome)
+    } else if(location === "/catalog_games"){
+      setClassGames("active")
+      console.log(classGames)
+    } else if(location === "/login"){
+      setClassLogin("active")
+    } else {
+      setClassBossForm("active")
+    }
+  }
 
   return(
     <>
       <div className="navBarDiv">
-          <h4 className="navMenu" children="dropdown" onClick={() => {
-            if (clickNum === 0){
-              setButtonClass('dropdown')
-              setClickNum(1)
-            } else {
-              setButtonClass('dropdownPre')
-              setClickNum(0)
-            }
-          }}>Menu</h4>
-          <ul className={buttonClass}>
-            <li className="navLi"><a href="/" className="navLinks">Home</a></li>
-            <li className="navLi"><a href="/catalog_games" className="navLinks">Games</a></li>
+          <ul className="dropdown">
+            <li className="navLi"><a href="/" className={classHome}>Home</a></li>
+            <li className="navLi"><a href="/catalog_games" className={classGames}>Games</a></li>
             {!token
               ?
-              <li className="navLi"><a href="/login" className="navLinks">Login</a></li>
+              <li className="navLi"><a href="/login" className={classLogin}>Login</a></li>
               :
-              <li className="navLi"><a href="/bosses/newboss" className="navLinks">Add Boss</a></li>
+              <li className="navLi"><a href="/bosses/newboss" className={classBossForm}>Add Boss</a></li>
             }
           </ul>
       </div>

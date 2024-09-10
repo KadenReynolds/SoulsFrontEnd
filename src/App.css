@@ -95,9 +95,9 @@
 .dropdown{
   position: absolute;
   top: 0svh;
-  width: 5svw;
+  width: 3svw;
   height: 1svh;
-  left: 40svw;
+  left: 42svw;
   right: 0svw;
   top: 0svh;
   list-style: none;
@@ -107,12 +107,27 @@
   padding-top: 3svh;
   color: white;
   z-index: -1;
-  border-radius: 50px;
+  border-radius: 10px;
   border: 1px solid white;
   display: inline;
-  transition: 1s;
-  transition-delay: 1s;
-  transition-property: width, height, left;
+  transition-duration: 1s, 0s;
+  transition-delay: 1s, 0s;
+  transition-property: width height left, border-radius;
+}
+
+.dropdownMenu{
+  position: absolute;
+  top: 0svh;
+  bottom: 0svh;
+  left: 1.75svw;
+  text-align: center;
+  font-size: 20pt;
+  margin: 0;
+  transition-delay: 1.25s;
+  transition-property: opacity;
+  transition-duration: .5s;
+  opacity: 1;
+  /* transition: .25s; */
 }
 
 .dropdown:hover{
@@ -127,12 +142,25 @@
   background-color: rgb(8, 8, 8);
   text-align: center;
   padding-right: 2svw;
-  padding-top: 3svh;
   color: white;
   z-index: -1;
   border-radius: 50px;
-  border: 1px solid white;
+  border: 1px solid rgb(255, 217, 0);
   display: inline;
+  transition-duration: 1s, .5s;
+  transition-delay: .5s, 1s;
+  transition-property: width height left, border-color;
+}
+
+.dropdown:hover .dropdownMenu{
+  position: absolute;
+  top: 0svh;
+  bottom: 0svh;
+  left: 2.5svw;
+  text-align: center;
+  font-size: 20pt;
+  margin: 0;
+  opacity: 0;
   transition: .5s;
 }
 
@@ -145,9 +173,11 @@
   border-radius: 40px;
   background-color: black;
   padding: 10px 10px;
+  margin-top: 3svh;
   font-weight: 200;
   font-family: myFont;
-  transition-delay: .5s, 1s;
+  transition-delay: 1s, .25s;
+  transition-duration: .5s, 1s;
   transition-property: opacity, border-radius border-color;
   opacity: 1;
 }
@@ -165,9 +195,10 @@
   border-radius: 10px;
   background-color: black;
   padding: 10px 10px;
+  margin-top: 3svh;
   font-weight: 800;
   font-family: myFont;
-  transition-delay: .5s;
+  transition-delay: 1s;
   transition-property: opacity;
   opacity: 1;
 }
@@ -181,6 +212,7 @@
   border-radius: 10px;
   background-color: black;
   padding: 10px 10px;
+  margin-top: 3svh;
   font-family: myFont;
   transition: 1s;
   opacity: 1;
@@ -213,6 +245,7 @@
   padding: 1svw;
   text-align: center;
   color: white;
+  margin-top: 3svh;
 }
 
 
@@ -225,6 +258,7 @@
   border-radius: 40px;
   background-color: black;
   padding: 10px 10px;
+  margin-top: 3svh;
   font-weight: 200;
   font-family: myFont;
   transition-delay: 2s;
@@ -247,6 +281,7 @@
   border-radius: 10px;
   background-color: black;
   padding: 10px 10px;
+  margin-top: 3svh;
   font-weight: 800;
   font-family: myFont;
   transition: 1s;
@@ -262,6 +297,7 @@
   border-radius: 10px;
   background-color: black;
   padding: 10px 10px;
+  margin-top: 3svh;
   font-weight: 800;
   font-family: myFont;
   transition: 1s;

@@ -33,6 +33,7 @@ export default function Navbar({token}){
     <>
       <div className="navBarDiv">
           <ul className="dropdown">
+            <h4 className="dropdownMenu">Menu</h4>
             <li className="navLi"><a href="/" className={classHome}>Home</a></li>
             <li className="navLi"><a href="/catalog_games" className={classGames}>Games</a></li>
             {!token

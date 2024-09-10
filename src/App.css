@@ -46,6 +46,119 @@
   color: #888;
 }
 
+/* Navbar */
+
+.navBarDiv{
+  position: fixed;
+  right: 1svw;
+  top: 0;
+  z-index: 1;
+  width: 20svw;
+}
+
+.navMenu{
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  width: 4svw;
+  padding-left: 1svw;
+  text-align: center;
+  margin-left: 6.75svw;
+  border: 1px solid rgb(255, 217, 0);
+}
+
+.buttonDiv{
+  width: 10svw;
+}
+
+.navMenu{
+  color: rgb(255, 217, 0);
+  font-size: 20pt;
+  z-index: 1;
+  text-align: center;
+  padding-right: 20px;
+}
+
+.dropdown{
+  position: absolute;
+  top: 0svh;
+  width: 15svw;
+  height: 30svw;
+  left: 0;
+  right: 0svw;
+  top: 0svh;
+  list-style: none;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  padding-right: 2svw;
+  padding-top: 10svh;
+  color: white;
+  z-index: -1;
+  border-radius: 10px;
+  border: 3px solid white;
+  display: block;
+  transition: .5s;
+}
+
+.dropdownPre{
+  position: absolute;
+  top: 0svh;
+  width: 15svw;
+  height: 30svw;
+  left: 0;
+  right: 0svw;
+  top: 0svh;
+  list-style: none;
+  background-color: rgb(20, 20, 20);
+  text-align: center;
+  padding-right: 2svw;
+  padding-top: 10svh;
+  color: white;
+  z-index: -1;
+  border-radius: 10px;
+  border: 5px solid white;
+  display: none;
+  transition: .5s;
+}
+
+.navLi{
+  display: block;
+  position: relative;
+  padding: 1svw 2svh;
+  text-align: center;
+  color: white;
+}
+
+.navLinks{
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(182, 131, 30);
+  border: 1px solid rgb(127, 97, 36);
+  border-radius: 5px;
+  background-color: black;
+  padding: 10px 10px;
+  transition: .5s;
+}
+
+.dropdown .navLi  .navLinks{
+  font-size: 15pt;
+}
+
+.navLinks:hover{
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(255, 217, 0);
+  border: 1px solid rgb(255, 217, 0);
+  border-radius: 5px;
+  background-color: black;
+  padding: 10px 10px;
+  transition: .5s;
+}
+
+
+/* ---------------------------- */
+
 /* Catalog Games */
 
 .gameMasterDiv{

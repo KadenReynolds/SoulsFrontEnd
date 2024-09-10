@@ -6,6 +6,7 @@ import BossEditForm from './pages/BossEditForm'
 import GameBosses from './pages/GameBosses'
 import Home from './pages/Home'
 import Login from './pages/Login'
+import Navbar from './components/Navbar'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <>
+      <Navbar token={token}/>
       <Routes>
       <Route path='/' element={<Home token={token}/>}/>
         <Route path='/bosses/newboss' element={<BossForm token={token}/>}/>

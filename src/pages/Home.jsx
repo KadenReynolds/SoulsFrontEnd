@@ -9,13 +9,13 @@ export default function Home({token}) {
   return(
     <>
       <h1>Welcome</h1>
-      <button onClick={() => {handleClick('/catalog_games')}}>Games</button>
-      {!token
+      {/* <button onClick={() => {handleClick('/catalog_games')}}>Games</button> */}
+      {/* {!token
         ?
         <button onClick={() => {handleClick('/login')}}>Admin Login</button>
         :
         <></>
-      }
+      } */}
     </>
   )
 }

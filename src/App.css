@@ -452,6 +452,10 @@
   height: 240svw;
 } */
 
+.gameInfoDiv{
+  color: white;
+}
+
 .bossGameMasterDiv{
   position: relative;
   left: 0;
@@ -460,6 +464,15 @@
   height: auto;
   /* background-color: black; */
   overflow-x: hidden;
+}
+
+.bossRankHeader{
+  color: white;
+  position: absolute;
+  top: 25svh;
+  left: 1svw;
+  padding-bottom: 5svh;
+  font-size: 25pt;
 }
 
 .bossDiv{
@@ -471,7 +484,7 @@
 
 .bossDiv > h3{
   position: absolute;
-  top: 3svh;
+  top: 35svh;
   left: 1svw;
   color: white;
   font-size: 25pt;
@@ -480,7 +493,7 @@
 .deleteBoss{
   position: absolute;
   color: red;
-  top: 7svh;
+  top: 39svh;
   right: 20svw;
   font-size: 10pt;
   font-weight: bolder;
@@ -489,7 +502,7 @@
 .editBoss{
   position: absolute;
   color: green;
-  top: 7svh;
+  top: 39svh;
   right: 23svw;
   font-size: 10pt;
   font-weight: bolder;
@@ -497,7 +510,7 @@
 
 .bossDiv > img{
   margin-right: 100%;
-  margin-top: 12svh;
+  margin-top: 44svh;
   width: 60svw;
   aspect-ratio: 1.7;
 }
@@ -523,7 +536,7 @@
   right: 20svw;
   bottom: 25svw;
   left: 15svw;
-  top: 43svw;
+  top: 60svw;
 }
 
 /* ---------------------------- */

@@ -3,6 +3,7 @@ import {Routes, Route} from 'react-router-dom'
 import Games_Catalog from './pages/Games_Catalog'
 import BossForm from './pages/BossForm'
 import BossEditForm from './pages/BossEditForm'
+import GameEditForm from './pages/GameEditForm'
 import GameBosses from './pages/GameBosses'
 import Home from './pages/Home'
 import Login from './pages/Login'
@@ -26,6 +27,7 @@ function App() {
       <Route path='/' element={<Home token={token}/>}/>
         <Route path='/bosses/newboss' element={<BossForm token={token}/>}/>
         <Route path='/bosses/editboss/:bossID' element={<BossEditForm token={token}/>}/>
+        <Route path='/catalog_games/editgame/:gameID' element={<GameEditForm token={token}/>}/>
         <Route path='/catalog_games' element={<Games_Catalog token={token}/>}/>
         <Route path='/bosses/:gameID' element={<GameBosses token={token}/>}/>
         {!token

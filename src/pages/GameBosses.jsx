@@ -99,11 +99,16 @@ export default function GameBosses({token}) {
         <></>
         :
         <>
-          <button className="gameEditButton">i</button>
+          <button className="gameEditButton" onClick={() => {navigate(`/catalog_games/editgame/${game.game_id}`)}}>i</button>
           <button className="gameDeleteButton" onClick={() => {deleteGame(game.game_id)}}>Delete Game</button>
         </>
       }
+        <div className="gameInfoDiv">
+          <h4>Description: "{game.description}"</h4>
+          <h4>Build: "{game.build_played}"</h4>
+        </div>
         <div className="bossGameMasterDiv">
+          <h2 className="bossRankHeader">{game.name} Boss Ranking:</h2>
           {bosses.map((boss) => {
             return(
                 <div key={boss.boss_id} className="bossDiv">

@@ -92,6 +92,14 @@
   padding-right: 20px;
 }
 
+.navIcon{
+  position: absolute;
+  width: 125px;
+  aspect-ratio: 1;
+  top: -2svh;
+  left: 0;
+}
+
 .dropdown{
   position: absolute;
   top: 0svh;

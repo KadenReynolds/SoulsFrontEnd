@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
 import menu from '../assets/menu.svg'
 import menuflipped from '../assets/menuflipped.svg'
+import SSIcon from '../assets/SSIcon.svg'
+import SSIcon2 from '../assets/SSIcon2.svg'
 import { useLocation } from "react-router-dom"
 
 export default function Navbar({token}){
@@ -31,6 +33,7 @@ export default function Navbar({token}){
 
   return(
     <>
+      <img src={SSIcon2} alt="" className="navIcon"/>
       <div className="navBarDiv">
           <ul className="dropdown">
             <h4 className="dropdownMenu">Menu</h4>

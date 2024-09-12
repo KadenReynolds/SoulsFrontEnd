@@ -40,7 +40,7 @@ export default function GameEditForm({token}) {
       console.log(result.game[0])
 
       setGame(result.game[0])
-      setName(result.game[0].name)
+      setName(result.game[0].title)
       setDescription(result.game[0].description)
       setBuild(result.game[0].build_played)
       setImage(result.game[0].game_image)
@@ -58,7 +58,7 @@ export default function GameEditForm({token}) {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          name: name,
+          title: name,
           description: description,
           build_played: build,
           game_image: image,
@@ -91,7 +91,7 @@ export default function GameEditForm({token}) {
               Name:
             </label>
             <br />
-            <input type="text" placeholder="Enter Name" className="formInputs" onChange={handleName} defaultValue={game.name}/>
+            <input type="text" placeholder="Enter Name" className="formInputs" onChange={handleName} defaultValue={game.title}/>
             <br />
             <br />
             <label htmlFor="desc">

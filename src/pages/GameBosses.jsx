@@ -93,7 +93,7 @@ export default function GameBosses({token}) {
   
   return (
     <>
-      <h1>{game.name}</h1>
+      <h1>{game.title}</h1>
       {!token
         ?
         <></>
@@ -107,6 +107,8 @@ export default function GameBosses({token}) {
           <h4>Description: "{game.description}"</h4>
           <h4>Build: "{game.build_played}"</h4>
         </div>
+        <button onClick={() => {window.scrollTo(0, document.body.scrollHeight)}} className="buttonScroll">Scroll to Bottom</button>
+        <h5 className="buttonNote">Note: Scrolling any further down will show you the bosses in Ascending order meaning you will see the #1 spot first, click this button to start at the worst boss</h5>
         <div className="bossGameMasterDiv">
           <h2 className="bossRankHeader">{game.name} Boss Ranking:</h2>
           {bosses.map((boss) => {

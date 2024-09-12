@@ -69,7 +69,7 @@ export default function Games_Catalog({token}) {
               <div className="gameDiv" key={game.game_id} onClick={() => {handleClickNavigate(game.game_id)}}>
                 <img src={game.game_image} alt="Image Not Available"/>
                 <div>
-                  <h3 className="gameName">{game.name}</h3>
+                  <h3 className="gameName">{game.title}</h3>
                 </div>
                 {/* {!token
                   ?

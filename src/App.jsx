@@ -5,6 +5,7 @@ import BossForm from './pages/BossForm'
 import BossEditForm from './pages/BossEditForm'
 import GameEditForm from './pages/GameEditForm'
 import GameBosses from './pages/GameBosses'
+import Awards from './pages/Awards'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Navbar from './components/Navbar'
@@ -30,6 +31,7 @@ function App() {
         <Route path='/catalog_games/editgame/:gameID' element={<GameEditForm token={token}/>}/>
         <Route path='/catalog_games' element={<Games_Catalog token={token}/>}/>
         <Route path='/bosses/:gameID' element={<GameBosses token={token}/>}/>
+        {/* <Route path='/awards' element={<Awards/>}/> */}
         {!token
           ? 
           <Route path='/login' element={<Login setToken={setToken}/>}/>

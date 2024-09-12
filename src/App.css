@@ -572,3 +572,38 @@
 .bossFormDiv{
   margin-bottom: 5svh;
 }
+
+/* ---------------------------- */
+
+/* Awards */
+
+.awardMasterDiv{
+  position: relative;
+  left: 0;
+  margin-left: -15svw;
+  margin-top: 10svh;
+  width: 80svw;
+  height: auto;
+  /* background-color: black; */
+  overflow-x: hidden;
+  color: white;
+}
+
+.awardBossDiv{
+  overflow-x: hidden;
+  position: relative;
+  width: auto;
+  height: auto;
+  color: white;
+  margin-right: 60svw;
+}
+
+.awardBossDiv > h3 {
+  /* position: absolute; */
+  /* top: 10svh;
+  left: 5svw; */
+  color: white;
+  font-size: 15pt;
+}
+
+/* ---------------------------- */

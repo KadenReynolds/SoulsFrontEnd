@@ -3,10 +3,8 @@ import { useState, useEffect } from "react"
 export default function Awards () {
   const [games, setGames] = useState([{}])
   const [bossID, setBossID] = useState(1)
-  const [bossesBB, setBossesBB] = useState([{
-    status: "",
-    name:""
-  }])
+  const [bbBestBoss, setBBBestBoss] = useState({})
+  const [bbWorstBoss, setBBWorstBoss] = useState({})
 
   useEffect(() => {
     fetchGames()
@@ -32,10 +30,10 @@ export default function Awards () {
       try {
         const response = await fetch(`http://localhost:3000/api/bosses/${game_Id}/gamebosses/ladela`)
         const result = await response.json()
-    
-        console.log(result)
+
         if(result[0].title === "BloodBorne"){
-          setBossesBB(result)
+          setBBBestBoss(result[0])
+          setBBWorstBoss(result[1])
         }
       }
       catch(err){
@@ -45,9 +43,12 @@ export default function Awards () {
   
   return (
     <>        
-      {/* {console.log(bossesBB[0].title)} */}
-      <div><h1>Worst boss in {bossesBB[0].title} goes to... {bossesBB[0].name}</h1></div>     
-      <div><h1>Best boss in {bossesBB[1].title} goes to... {bossesBB[1].name}</h1></div> 
+      {console.log(bbBestBoss)}
+      {console.log(bbWorstBoss)}
+      <div className="awardMasterDiv">
+        <div className="awardBossDiv"><h3># Worst boss in {bbWorstBoss.title} goes to... <br /><u>{bbWorstBoss.name}</u></h3></div>     
+        <div className="awardBossDiv"><h3># Best boss in {bbBestBoss.title} goes to... <br /><u>{bbBestBoss.name}</u></h3></div> 
+      </div>
     </>
   )
 }

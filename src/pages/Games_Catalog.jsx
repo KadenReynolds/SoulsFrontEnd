@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom";
+import AwardsPhoto from '../assets/AwardsPhoto.png'
 
 
 export default function Games_Catalog({token}) {
@@ -71,19 +72,16 @@ export default function Games_Catalog({token}) {
                 <div>
                   <h3 className="gameName">{game.title}</h3>
                 </div>
-                {/* {!token
-                  ?
-                  <></>
-                  :
-                  <>
-                    <button className="gameEditButton">i</button>
-                    <button className="gameDeleteButton" onClick={() => {handleDeleteClick(game.game_id)}}>X</button>
-                  </>
-                } */}
               </div>
             </>
           )
         })}
+        <div className="gameDiv" key={"awards"} onClick={() => {navigate('/awards')}}>
+          <img src={AwardsPhoto} alt="Image Not Available"/>
+          <div>
+            <h3 className="gameName">Awards</h3>
+          </div>
+        </div>
       </div>
     </>
   )

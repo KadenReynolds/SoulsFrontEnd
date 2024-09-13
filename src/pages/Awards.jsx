@@ -28,7 +28,7 @@ export default function Awards () {
 
   async function getBossesAndGameNameByGameIDInOrderOfLadela(game_Id){
       try {
-        const response = await fetch(`http://localhost:3000/api/bosses/${game_Id}/gamebosses/ladela`)
+        const response = await fetch(`https://soulsserver-production.up.railway.app/api/bosses/${game_Id}/gamebosses/ladela`)
         const result = await response.json()
 
         if(result[0].title === "BloodBorne"){
@@ -45,9 +45,21 @@ export default function Awards () {
     <>        
       {console.log(bbBestBoss)}
       {console.log(bbWorstBoss)}
+      <h1>Awards</h1>
       <div className="awardMasterDiv">
-        <div className="awardBossDiv"><h3># Worst boss in {bbWorstBoss.title} goes to... <br /><u>{bbWorstBoss.name}</u></h3></div>     
-        <div className="awardBossDiv"><h3># Best boss in {bbBestBoss.title} goes to... <br /><u>{bbBestBoss.name}</u></h3></div> 
+        <h1 className="awardGameHeader">{bbWorstBoss.title}</h1>
+        <hr />
+        <div className="awardBossDiv">
+          <h2><u># Worst boss in {bbWorstBoss.title} goes to...</u></h2>
+          <h3>{bbWorstBoss.name}</h3>
+          <img src={bbWorstBoss.boss_image} alt="" />
+        </div>     
+        <div className="awardBossDiv">
+          <h2><u># Best boss in {bbBestBoss.title} goes to...</u></h2>
+          <h3>{bbBestBoss.name}</h3>
+          <img src={bbBestBoss.boss_image} alt="" />
+        </div>
+        <hr /> 
       </div>
     </>
   )

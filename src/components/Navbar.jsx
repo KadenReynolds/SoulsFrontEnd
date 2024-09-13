@@ -17,17 +17,15 @@ export default function Navbar({token}){
   },[])
   
   function getPath() {
-    console.log(location)
     if(location === "/"){
       setClassHome("active")
-      console.log(classHome)
-    } else if(location === "/catalog_games"){
-      setClassGames("active")
-      console.log(classGames)
+    } else if (location === "/bosses/newboss") {
+      console.log("Hello")
+      setClassBossForm("active")
     } else if(location === "/login"){
       setClassLogin("active")
-    } else {
-      setClassBossForm("active")
+    } else if(location === "/catalog_games" || location === `/bosses/${location[location.length - 1]}` && location != "/bosses/newboss"){
+      setClassGames("active")
     }
   }
 

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 
 export default function BossForm({token}) {
@@ -99,7 +99,6 @@ export default function BossForm({token}) {
     e.preventDefault();
     setNewBoss();
   }
-
 
   return(
     <>

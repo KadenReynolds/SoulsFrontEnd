@@ -459,9 +459,16 @@
 .buttonScroll{
   position: absolute;
   left: 3svw;
-  color: rgb(255, 217, 0);
+  color: white;
   top: 80svh;
   z-index: 1;
+  transition: .5s;
+}
+
+.buttonScroll:hover{
+  border-color: rgb(255, 217, 0);
+  color: rgb(255, 217, 0);
+  transition: .5s;
 }
 
 .buttonNote{
@@ -557,6 +564,20 @@
   top: 60svw;
 }
 
+.newBossBtn > a{
+  color: white;
+  transition: .5s;
+}
+
+.newBossBtn:hover > a{
+  color: rgb(255, 217, 0);
+  transition: .5s;
+}
+
+.newBossBtn:hover{
+  border-color: rgb(255, 217, 0);
+}
+
 /* ---------------------------- */
 
 /* Boss Form */
@@ -589,13 +610,27 @@
   color: white;
 }
 
+.awardGameHeader{
+  width: 20svw;
+  margin-bottom: 0;
+}
+
 .awardBossDiv{
   overflow-x: hidden;
   position: relative;
   width: auto;
   height: auto;
   color: white;
-  margin-right: 60svw;
+  margin-right: 20svw;
+  margin-bottom: 10svh;
+}
+
+.awardBossDiv > h2 {
+  /* position: absolute; */
+  /* top: 10svh;
+  left: 5svw; */
+  color: rgb(255, 217, 0);
+  font-size: 30pt;
 }
 
 .awardBossDiv > h3 {
@@ -604,6 +639,12 @@
   left: 5svw; */
   color: white;
   font-size: 15pt;
+  width: 20svw;
+}
+
+.awardBossDiv > img {
+  width: 1000px;
+  aspect-ratio: 1.75;
 }
 
 /* ---------------------------- */

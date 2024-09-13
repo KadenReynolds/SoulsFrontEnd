@@ -141,7 +141,7 @@ export default function GameBosses({token}) {
             ?
             <></>
             :
-            <button onClick={() => {navigate('/bosses/newboss')}}>+ Add New Boss</button>
+            <button className="newBossBtn"><a href="/bosses/newboss">+ Add New Boss</a></button>
           }
         </div>
     </>

@@ -33,8 +33,6 @@ export default function GameBosses({token}) {
       const response = await fetch(`https://soulsserver-production.up.railway.app/api/games/${gameID}`)
       const result = await response.json()
 
-      console.log(result.game[0])
-
       setGame(result.game[0])
     }
     catch(err){
@@ -46,8 +44,6 @@ export default function GameBosses({token}) {
     try {
       const response = await fetch(`https://soulsserver-production.up.railway.app/api/bosses/${gameID}/ladela`)
       const result = await response.json()
-
-      console.log(result.bosses)
 
       setBosses(result.bosses)
     }
@@ -106,6 +102,7 @@ export default function GameBosses({token}) {
         <div className="gameInfoDiv">
           <h4>Description: "{game.description}"</h4>
           <h4>Build: "{game.build_played}"</h4>
+          <h4>Patch: "{game.patch}"</h4>
         </div>
         <button onClick={() => {window.scrollTo(0, document.body.scrollHeight)}} className="buttonScroll">Scroll to Bottom</button>
         <h5 className="buttonNote">Note: Scrolling any further down will show you the bosses in Ascending order meaning you will see the #1 spot first, click this button to start at the worst boss</h5>

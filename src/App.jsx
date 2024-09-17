@@ -19,7 +19,6 @@ function App() {
   useEffect(() => {
     const storedToken = localStorage.getItem("token")
     setToken(storedToken)
-    console.log(gameID)
   },[])
 
   return (
@@ -27,11 +26,11 @@ function App() {
       <Navbar token={token}/>
       <Routes>
       <Route path='/' element={<Home token={token}/>}/>
-        <Route path='/bosses/newboss' element={<BossForm token={token} gameID={gameID}/>}/>
+        <Route path='/bosses/newboss' element={<BossForm token={token}/>}/>
         <Route path='/bosses/editboss/:bossID' element={<BossEditForm token={token}/>}/>
         <Route path='/catalog_games/editgame/:gameID' element={<GameEditForm token={token}/>}/>
         <Route path='/catalog_games' element={<Games_Catalog token={token}/>}/>
-        <Route path='/bosses/:gameID' element={<GameBosses token={token} setGameID={setGameID}/>}/>
+        <Route path='/bosses/:gameID' element={<GameBosses token={token}/>}/>
         <Route path='/awards' element={<Awards/>}/>
         {!token
           ? 
